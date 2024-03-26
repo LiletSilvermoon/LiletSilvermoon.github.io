@@ -64,6 +64,8 @@ h1 {
     align-items: center;
     width: 40%;
     height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #social-icons a i{
