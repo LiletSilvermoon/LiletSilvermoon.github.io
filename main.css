@@ -7,7 +7,7 @@
 
 body {
     width: 95%;
-    background: linear-gradient(90deg, black, grey, black);
+    background: linear-gradient(90deg, black, #2f3033, black);
     margin: auto;
     display: flex;
     flex-flow: column;
@@ -83,7 +83,7 @@ span {
     flex-flow: column;
     justify-content: center;
     grid-gap: 20px;
-    width: 80%;
+    width: 90%;
     margin: auto;
     
 }
@@ -105,6 +105,7 @@ span {
 
 .tile p {
     font-size: 16px;
+    padding: 5px;
 }
 
 h3 {
