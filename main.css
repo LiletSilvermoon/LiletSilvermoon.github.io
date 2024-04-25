@@ -122,11 +122,13 @@ h3 {
 }
 
 .bottom {
-  display: flex;
+ border: solid red 1px;
+ display: flex;
  flex-flow: column;
  text-align: center;
  padding-top: 5px;
- padding-bottom: 10px;
+ padding-bottom: 20px;
+ 
 }
  
 
