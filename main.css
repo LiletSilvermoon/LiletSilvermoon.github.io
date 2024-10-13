@@ -1,61 +1,70 @@
 * {
- margin: 0;
- padding: 0;
- font-family: sans-serif;
- color: azure;  
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #F0F8FF;
+    box-sizing: border-box;
 }
 
 body {
-    width: 95%;
-    background: linear-gradient(90deg, black, #2f3033, black);
-    margin: auto;
+    background: linear-gradient(90deg, #000, #2f3033, #000);
+    margin: 0 auto;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
+    align-items: center;
     gap: 30px;
     min-width: 300px;
     max-width: 600px;
-}   
-    
+    padding: 20px;
+}
+
+/* Profile Section */
 #profile-pic {
     height: 150px;
-    border-radius: 30%;
-    box-shadow: 15px 10px 12px 17px rgba(0,0,0,0.74);
-    }
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+}
+
+#profile-pic:hover {
+    transform: scale(1.1);
+}
+
 #profile-img {
-    width: 100%;
     display: flex;
     justify-content: center;
-}
-    
-#header {
     width: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-items: center;
-    gap: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background:linear-gradient(transparent, rgba(0, 0, 0, 100%) 60%, transparent);
 }
-    
-h1 {
+
+/* Header Section */
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
     text-align: center;
-    padding-top: 25px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #FFD700;
 }
 
 #header p {
-    text-align: center;
-    font-size: 16px;
-     padding-left: 10px;
-    padding-right: 10px;
+    font-size: 1.1rem;
+    color: #B0C4DE;
+    padding: 0 15px;
 }
 
+/* Social Icons */
 #icons {
     margin: 0 auto;
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 20px;
 }
 
 #social-icons {
@@ -63,73 +72,88 @@ h1 {
     justify-content: space-evenly;
     align-items: center;
     width: 80%;
-    height: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 20px 0;
 }
 
-#social-icons a i{
-    font-size: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
+#social-icons a i {
+    font-size: 30px;
+    color: #FFD700;
+    transition: color 0.3s ease;
 }
 
+#social-icons a i:hover {
+    color: #1E90FF;
+}
 
+/* Links Section */
 #links {
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    grid-gap: 25px;
-    width: 90%;
-    margin: auto;
-    
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
 }
 
 .tile {
-
     height: 90px;
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    flex-flow: column;
     justify-content: center;
-    align-content: center;
-    border-radius: 15%;
-    text-align: center;
+    align-items: center;
+    border-radius: 12px;
+    background: rgba(50, 50, 50, 0.8);
     text-decoration: none;
-    background: linear-gradient(transparent 6%, rgba(0, 0, 0, 50%) 50%, transparent);
+    text-align: center;
+    color: #F0F8FF;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.tile:hover {
+    background: rgba(70, 70, 70, 0.9);
+    transform: translateY(-5px);
 }
 
 .tile p {
-    font-size: 16px;
-    padding: 5px;
+    font-size: 1rem;
 }
 
-h3 {
-    font-size: 20px;
-    padding-bottom: 8px;
-}
-
+/* Bottom Section */
 #bottom {
-    display: flex;
-    flex-flow: column;
     text-align: center;
-    padding-bottom: 70px;
-    padding-top: 50px;
-    gap: 20px;
-    background: linear-gradient(transparent , rgba(0, 0, 0, 50%) 60%, transparent);
-
+    padding: 50px 0;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    width: 100%;
 }
 
 .bottom1 {
- display: flex;
- flex-flow: column;
- text-align: center;
- padding-top: 5px;
- padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
 }
- 
+
 .bottom1 p {
- padding-top: 5px;
- padding-bottom: 5px;
+    color: #B0C4DE;
+    font-size: 0.9rem;
+    padding: 10px 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #header p {
+        font-size: 1rem;
+    }
+
+    #social-icons a i {
+        font-size: 25px;
+    }
+
+    .tile p {
+        font-size: 0.9rem;
+    }
 }
