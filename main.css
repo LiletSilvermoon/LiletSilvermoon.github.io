@@ -114,6 +114,10 @@ nav ul li a:hover {
   padding: 20px 0;
 }
 
+.reg p {
+  margin-bottom: 16px;
+}
+
 /* Tile Styles */
 .tile {
   background: linear-gradient(145deg, #FFDEE9, #f6a9c1); /* Gradient background for 3D effect */
@@ -214,7 +218,3 @@ nav ul li a:hover {
   }
 }
 
-
-    .tile p {
-        font-size: 0.9rem;
-    }
