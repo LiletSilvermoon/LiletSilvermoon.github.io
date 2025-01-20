@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lilet Silvermoon</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://kit.fontawesome.com/7dcd3d97a0.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="payments.html">Payments</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="costars.html">Co-star's & Dating</a></li>
+        </ul>
+    </nav>
+    <section id="header">
+      <h1>Payment Methods</h1>
+    </section>
+      <div class="reg">
+        <p>Cash</p>
+        <p>Apple Pay: Phone # upon request.</p>
+        <p>Zelle: LiletSilvermoon@gmail.com or phone # upon request.</p>
+        <p>PayPal: @LiletSilvermoon</p>
+        <p>CashApp: $LiletSilvermoon</p>
+        <p>Venmo: @LiletSilvermoon</p>
+      </div>
+
+      <div class="payme">
+        <a href="payments.html">Any pics, videos, calls or messages will be ignored until payment is received.</a>
+      </div>
+    </section>
+    <footer class="footer">
+        © 2023 Lilet Silvermoon - All Rights Reserved 
+     </footer>
+  </body>
+</html>
