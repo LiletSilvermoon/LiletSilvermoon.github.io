@@ -114,9 +114,6 @@ nav ul li a:hover {
   padding: 20px 0;
 }
 
-.reg p {
-  margin-bottom: 16px;
-}
 
 /* Tile Styles */
 .tile {
@@ -177,6 +174,30 @@ nav ul li a:hover {
   transform: scale(1.2);
 }
 
+/* Style for .reg p in costars.html */
+.reg {
+  text-align: center; /* Center-aligns all text in the .reg section */
+  margin: 0 auto; /* Centers the section itself */
+  max-width: 800px; /* Restricts the overall width of the content */
+  padding: 20px; /* Adds padding around the section for breathing room */
+}
+
+.reg p {
+  text-align: left; /* Aligns paragraphs to the left for readability */
+  margin: 10px 0; /* Adds space between each paragraph */
+  line-height: 1.6; /* Improves line spacing for better readability */
+  max-width: 600px; /* Limits the paragraph width */
+  margin-left: auto; /* Centers the paragraph horizontally */
+  margin-right: auto;
+}
+
+.reg h2 {
+  text-align: center; /* Center-aligns the heading */
+  margin-bottom: 20px; /* Adds spacing below the heading */
+  font-size: 1.5rem; /* Adjusts font size */
+  color: #D6336C; /* Matches the pink aesthetic */
+}
+
 /* Footer */
 .footer {
   width: 100%;
@@ -212,6 +233,11 @@ nav ul li a:hover {
   .tile h3 {
     font-size: 1.3rem;
   }
+
+  .tile p {
+    font-size: 0.9rem;
+  }
+}
 
   .tile p {
     font-size: 0.9rem;
