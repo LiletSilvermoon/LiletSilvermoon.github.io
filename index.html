@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lilet Silvermoon | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --text: #fff7fc;
+        --muted: #dccdda;
+        --accent: #f5a7d6;
+        --accent-2: #d49cff;
+        --line: rgba(255, 255, 255, 0.12);
+        --card-bg: rgba(255, 255, 255, 0.06);
+        --shadow: 0 22px 55px rgba(0, 0, 0, 0.34);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top, rgba(245, 167, 214, 0.2), transparent 28%),
+          radial-gradient(circle at 80% 20%, rgba(212, 156, 255, 0.16), transparent 22%),
+          linear-gradient(180deg, #120c14 0%, #18101c 45%, #100a12 100%);
+        min-height: 100vh;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(100%, 580px);
+        margin: 0 auto;
+        padding: 20px 14px 40px;
+      }
+
+      nav {
+        position: sticky;
+        top: 12px;
+        z-index: 20;
+        margin-bottom: 18px;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        list-style: none;
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(12, 8, 14, 0.72);
+        backdrop-filter: blur(18px);
+        box-shadow: var(--shadow);
+      }
+
+      nav a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        border-radius: 999px;
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: var(--muted);
+        transition: 0.25s ease;
+      }
+
+      nav a:hover,
+      nav a.active {
+        color: var(--text);
+        background: linear-gradient(135deg, rgba(245, 167, 214, 0.3), rgba(212, 156, 255, 0.3));
+      }
+
+      .hero-shell {
+        border: 1px solid var(--line);
+        border-radius: 32px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .hero-image-card {
+        position: relative;
+        aspect-ratio: 4 / 5;
+        min-height: 420px;
+        background: #d7bdd0;
+      }
+
+      .hero-image-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .hero-image-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(10, 7, 12, 0.78) 0%,
+          rgba(10, 7, 12, 0.24) 36%,
+          rgba(10, 7, 12, 0.02) 72%
+        );
+        pointer-events: none;
+      }
+
+      .hero-badge {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 13px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.16);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .hero-name {
+        position: absolute;
+        left: 22px;
+        bottom: 28px;
+        z-index: 2;
+        max-width: 80%;
+      }
+
+      .hero-name h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(3rem, 7vw, 4.2rem);
+        line-height: 0.92;
+        font-weight: 700;
+        text-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+      }
+
+      .hero-content {
+        padding: 22px 20px 20px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.06);
+        color: #ffdff2;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .hero-content p {
+        color: var(--muted);
+        line-height: 1.75;
+        font-size: 0.98rem;
+      }
+
+      .hero-content p + p {
+        margin-top: 10px;
+      }
+
+      .socials {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .socials a {
+        width: 46px;
+        height: 46px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.06);
+        color: #fff;
+        font-size: 1rem;
+        transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+      }
+
+      .socials a:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(135deg, rgba(245, 167, 214, 0.28), rgba(212, 156, 255, 0.28));
+        border-color: rgba(255, 255, 255, 0.22);
+      }
+
+      .section-title {
+        margin: 28px 4px 14px;
+        font-size: 0.84rem;
+        color: #eddbe8;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-weight: 700;
+      }
+
+      .links {
+        display: grid;
+        gap: 14px;
+      }
+
+      .tile {
+        position: relative;
+        overflow: hidden;
+        border-radius: 28px;
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04));
+        backdrop-filter: blur(12px);
+        padding: 18px 18px 20px;
+        box-shadow: var(--shadow);
+        transition: transform 0.28s ease, border-color 0.28s ease, background 0.28s ease;
+      }
+
+      .tile:hover {
+        transform: translateY(-3px);
+        border-color: rgba(255, 255, 255, 0.2);
+        background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.06));
+      }
+
+      .tile-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 10px;
+      }
+
+      .tile-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 11px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        color: #ffe3f3;
+        font-size: 0.78rem;
+        font-weight: 700;
+      }
+
+      .tile h3 {
+        font-size: 1.18rem;
+        margin-bottom: 8px;
+      }
+
+      .tile p {
+        color: var(--muted);
+        line-height: 1.65;
+        font-size: 0.95rem;
+      }
+
+      .arrow {
+        flex-shrink: 0;
+        width: 42px;
+        height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #1a0f1d;
+        font-size: 1rem;
+        box-shadow: 0 10px 24px rgba(212, 156, 255, 0.3);
+      }
+
+      .footer {
+        margin-top: 24px;
+        text-align: center;
+        color: #baa9ba;
+        font-size: 0.84rem;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 520px) {
+        .page {
+          padding: 16px 12px 28px;
+        }
+
+        .hero-shell,
+        .tile {
+          border-radius: 24px;
+        }
+
+        .hero-image-card {
+          min-height: 380px;
+        }
+
+        .hero-name {
+          left: 18px;
+          bottom: 22px;
+        }
+
+        .hero-content {
+          padding: 18px 16px 18px;
+        }
+
+        .hero-name h1 {
+          font-size: 3.2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="payments.html">Payments</a></li>
+          <li><a href="costars.html">Dating</a></li>
+        </ul>
+      </nav>
+
+      <section class="hero-shell">
+        <div class="hero-image-card">
+          <span class="hero-badge">Houston, TX</span>
+          <img src="purplelilet.jpg" alt="Lilet Silvermoon portrait" />
+
+          <div class="hero-name">
+            <h1>Lilet Silvermoon</h1>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <span class="eyebrow">Houston baddie • soft glam • dark fantasy vibes</span>
+
+          <p>
+            Welcome to my world — feminine, magnetic, a little seductive, and serving fantasy.
+            I’m a Houston, Texas creator bringing beauty, confidence, and main-character energy into
+            everything I share.
+          </p>
+          <p>
+            Browse my books, shop my favorite finds, spoil me from my wishlist, or step into my
+            exclusive spaces for a closer look.
+          </p>
+
+          <div class="socials">
+            <a href="https://instagram.com/liletsilvermoon_" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/LiletSilvermoon" target="_blank" rel="noreferrer" aria-label="X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.tiktok.com/@liletsilvermoon?is_from_webapp=1&sender_device=pc" target="_blank" rel="noreferrer" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61573200722866" target="_blank" rel="noreferrer" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/latonyanguyen" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <p class="section-title">Choose your vibe</p>
+
+      <section class="links">
+        <a href="https://amzn.to/40fOdlm" class="tile" target="_blank" rel="noreferrer">
+          <div class="tile-top">
+            <span class="tile-badge"><i class="fa-solid fa-book-open"></i> Read me</span>
+            <span class="arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <h3>My Books</h3>
+          <p>
+            Slip into worlds filled with fae magic, forbidden desire, ancient curses, and romance
+            that burns across realms.
+          </p>
+        </a>
+
+        <a href="https://liletsilvermoon.creator-spring.com" class="tile" target="_blank" rel="noreferrer">
+          <div class="tile-top">
+            <span class="tile-badge"><i class="fa-solid fa-shirt"></i> Wear the vibe</span>
+            <span class="arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <h3>Merch</h3>
+          <p>
+            Shop pieces inspired by my brand, my energy, and the people who love supporting what I
+            create.
+          </p>
+        </a>
+
+        <a href="https://www.amazon.com/shop/the_soul_kisser?ref_=cm_sw_r_apin_aipsfshop_aipsfthe_soul_kisser_7NHTSE4B1903DS2F6332&language=en_USe" class="tile" target="_blank" rel="noreferrer">
+          <div class="tile-top">
+            <span class="tile-badge"><i class="fa-solid fa-bag-shopping"></i> Curated picks</span>
+            <span class="arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <h3>Amazon Storefront</h3>
+          <p>
+            Browse my favorite finds, beauty picks, and elevated everyday essentials I actually use
+            and love.
+          </p>
+        </a>
+
+        <a href="https://www.amazon.com/hz/wishlist/ls/2Q8YS5ERVJ1QS?ref_=wl_share" class="tile" target="_blank" rel="noreferrer">
+          <div class="tile-top">
+            <span class="tile-badge"><i class="fa-solid fa-gift"></i> Spoil me</span>
+            <span class="arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <h3>Amazon Wishlist</h3>
+          <p>
+            Want to make me smile? Pick something from my wishlist and send a gift directly my way.
+          </p>
+        </a>
+
+        <a href="https://onlyfans.com/liletsilvermoon" class="tile" target="_blank" rel="noreferrer">
+          <div class="tile-top">
+            <span class="tile-badge"><i class="fa-solid fa-crown"></i> Exclusive</span>
+            <span class="arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <h3>OnlyFans</h3>
+          <p>
+            For the ones who want more — exclusive content, personal attention, live moments, and a
+            closer side of me.
+          </p>
+        </a>
+
+        <a href="https://www.eplay.com/LiletSilvermoon?cp=Yummy+baby" class="tile" target="_blank" rel="noreferrer">
+          <div class="tile-top">
+            <span class="tile-badge"><i class="fa-solid fa-video"></i> Watch me</span>
+            <span class="arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <h3>ePlay</h3>
+          <p>
+            Subscribe, unlock clips and photos, and tap into even more playful content on demand.
+          </p>
+        </a>
+
+        <a href="https://www.reddit.com/u/DarkFaeUnSe/s/QTNPlMFSZJ" class="tile" target="_blank" rel="noreferrer">
+          <div class="tile-top">
+            <span class="tile-badge"><i class="fa-brands fa-reddit-alien"></i> After dark</span>
+            <span class="arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+          <h3>Reddit</h3>
+          <p>
+            Catch the unfiltered side, hidden gems, and a little underground energy waiting for you
+            there.
+          </p>
+        </a>
+      </section>
+
+      <footer class="footer">
+        © 2026 Lilet Silvermoon • Houston, Texas • All rights reserved
+      </footer>
+    </div>
+  </body>
+</html>

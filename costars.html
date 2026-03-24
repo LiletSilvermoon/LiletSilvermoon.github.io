@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lilet Silvermoon | Dating</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --text: #fff7fc;
+        --muted: #dccdda;
+        --accent: #f5a7d6;
+        --accent-2: #d49cff;
+        --line: rgba(255, 255, 255, 0.12);
+        --shadow: 0 22px 55px rgba(0, 0, 0, 0.34);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top, rgba(245, 167, 214, 0.2), transparent 28%),
+          radial-gradient(circle at 80% 20%, rgba(212, 156, 255, 0.16), transparent 22%),
+          linear-gradient(180deg, #120c14 0%, #18101c 45%, #100a12 100%);
+        min-height: 100vh;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(100%, 580px);
+        margin: 0 auto;
+        padding: 20px 14px 40px;
+      }
+
+      nav {
+        position: sticky;
+        top: 12px;
+        z-index: 20;
+        margin-bottom: 18px;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        list-style: none;
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(12, 8, 14, 0.72);
+        backdrop-filter: blur(18px);
+        box-shadow: var(--shadow);
+      }
+
+      nav a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        border-radius: 999px;
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: var(--muted);
+        transition: 0.25s ease;
+      }
+
+      nav a:hover,
+      nav a.active {
+        color: var(--text);
+        background: linear-gradient(135deg, rgba(245, 167, 214, 0.3), rgba(212, 156, 255, 0.3));
+      }
+
+      .hero-shell {
+        border: 1px solid var(--line);
+        border-radius: 32px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .hero-image-card {
+        position: relative;
+        aspect-ratio: 4 / 5;
+        min-height: 420px;
+        background: #d7bdd0;
+      }
+
+      .hero-image-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .hero-image-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(10, 7, 12, 0.78) 0%,
+          rgba(10, 7, 12, 0.24) 36%,
+          rgba(10, 7, 12, 0.02) 72%
+        );
+        pointer-events: none;
+      }
+
+      .hero-badge {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 13px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.16);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .hero-name {
+        position: absolute;
+        left: 22px;
+        bottom: 28px;
+        z-index: 2;
+        max-width: 85%;
+      }
+
+      .hero-name h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.8rem, 6vw, 4rem);
+        line-height: 0.94;
+        font-weight: 700;
+        text-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+      }
+
+      .hero-content {
+        padding: 22px 20px 22px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.06);
+        color: #ffdff2;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .hero-content p {
+        color: var(--muted);
+        line-height: 1.75;
+        font-size: 0.98rem;
+      }
+
+      .hero-content p + p {
+        margin-top: 10px;
+      }
+
+      .section-title {
+        margin: 28px 4px 14px;
+        font-size: 0.84rem;
+        color: #eddbe8;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-weight: 700;
+      }
+
+      .cards {
+        display: grid;
+        gap: 14px;
+      }
+
+      .card {
+        border-radius: 28px;
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04));
+        backdrop-filter: blur(12px);
+        padding: 18px 18px 20px;
+        box-shadow: var(--shadow);
+      }
+
+      .card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 10px;
+      }
+
+      .card-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 11px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        color: #ffe3f3;
+        font-size: 0.78rem;
+        font-weight: 700;
+      }
+
+      .icon-circle {
+        flex-shrink: 0;
+        width: 42px;
+        height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #1a0f1d;
+        font-size: 1rem;
+        box-shadow: 0 10px 24px rgba(212, 156, 255, 0.3);
+      }
+
+      .card h3 {
+        font-size: 1.18rem;
+        margin-bottom: 8px;
+      }
+
+      .card p,
+      .card li {
+        color: var(--muted);
+        line-height: 1.7;
+        font-size: 0.96rem;
+      }
+
+      .card ul {
+        padding-left: 18px;
+        margin-top: 8px;
+      }
+
+      .card li + li {
+        margin-top: 8px;
+      }
+
+      .footer {
+        margin-top: 24px;
+        text-align: center;
+        color: #baa9ba;
+        font-size: 0.84rem;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 520px) {
+        .page {
+          padding: 16px 12px 28px;
+        }
+
+        .hero-shell,
+        .card {
+          border-radius: 24px;
+        }
+
+        .hero-image-card {
+          min-height: 380px;
+        }
+
+        .hero-name {
+          left: 18px;
+          bottom: 22px;
+        }
+
+        .hero-content {
+          padding: 18px 16px 18px;
+        }
+
+        .hero-name h1 {
+          font-size: 3.1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="payments.html">Payments</a></li>
+          <li><a href="costars.html" class="active">Dating</a></li>
+        </ul>
+      </nav>
+
+      <section class="hero-shell">
+        <div class="hero-image-card">
+          <span class="hero-badge">Houston, TX</span>
+          <img src="DarkPurLilet.jpg" alt="Lilet Silvermoon portrait" />
+
+          <div class="hero-name">
+            <h1>Date Me</h1>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <span class="eyebrow">soft glam • feminine energy • meaningful connection</span>
+          <p>
+            I’m dating with intention, but I’m not rushing anything. I’m open to getting to know someone,
+            enjoying good company, going on real dates, being spoiled a little, and seeing whether there’s
+            a genuine connection worth building into something fulfilling and meaningful.
+          </p>
+          <p>
+            I love beauty, softness, and romance, but I’m also intelligent, ambitious, and layered. I’m into
+            anime, manga, and video games, and I have a degree in biotechnology while continuing school to
+            grow even further. I’m the kind of woman who can give you a soft, fun, feminine energy while still
+            having depth, goals, and a mind of her own.
+          </p>
+        </div>
+      </section>
+
+      <p class="section-title">A little about me</p>
+
+      <section class="cards">
+        <div class="card">
+          <div class="card-top">
+            <span class="card-badge"><i class="fa-solid fa-star"></i> My energy</span>
+            <span class="icon-circle"><i class="fa-solid fa-heart"></i></span>
+          </div>
+          <h3>What I’m like</h3>
+          <p>
+            I’m feminine, expressive, affectionate, and romantic, with a playful side and a taste for chemistry.
+            I enjoy feeling adored, pursued, and cared for, but I also appreciate real conversation, loyalty,
+            and emotional intelligence. I like a man who knows how to create a vibe, make plans, and bring
+            both passion and peace into my life.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <span class="card-badge"><i class="fa-solid fa-gamepad"></i> My interests</span>
+            <span class="icon-circle"><i class="fa-solid fa-sparkles"></i></span>
+          </div>
+          <h3>What I enjoy</h3>
+          <ul>
+            <li>Anime, manga, and video games</li>
+            <li>Romantic dates and quality time</li>
+            <li>Soft glam, beauty, and feminine experiences</li>
+            <li>Men who know how to lead, plan, and communicate</li>
+            <li>Meaningful chemistry with room for fun</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <span class="card-badge"><i class="fa-solid fa-gem"></i> What I’m looking for</span>
+            <span class="icon-circle"><i class="fa-solid fa-crown"></i></span>
+          </div>
+          <h3>My ideal man</h3>
+          <p>
+            I’m drawn to a man who is protective, reliable, transparent, consistent, generous, stable,
+            intelligent, and able to lead without being controlling. I like a man who communicates well,
+            keeps his word, and naturally knows how to make a woman feel secure, valued, and spoiled.
+          </p>
+          <p style="margin-top: 10px;">
+            Physically, I tend to gravitate toward men who are around 6'2 or taller, fit and active,
+            brunette or blonde, with blue eyes — but I’m not rigid about that. Energy, character,
+            consistency, and how you make me feel matter more than checking every box.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <span class="card-badge"><i class="fa-solid fa-champagne-glasses"></i> Dating style</span>
+            <span class="icon-circle"><i class="fa-solid fa-rose"></i></span>
+          </div>
+          <h3>What I want this to feel like</h3>
+          <p>
+            Think good dates, strong chemistry, generosity, laughter, effort, and a real boyfriend energy.
+            I like being taken out, treated well, and enjoying a soft, elevated experience together. I’m open
+            to seeing where things go naturally, as long as the connection feels mutual, genuine, and worth exploring.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <span class="card-badge"><i class="fa-solid fa-circle-check"></i> If this is you</span>
+            <span class="icon-circle"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+          <h3>We’ll probably get along if...</h3>
+          <ul>
+            <li>You’re intentional and know how to pursue a woman properly</li>
+            <li>You’re generous with your time, effort, attention, and energy</li>
+            <li>You’re stable, masculine, emotionally aware, and communicative</li>
+            <li>You like a woman who is feminine, ambitious, affectionate, and a little magnetic</li>
+            <li>You want something that feels good, real, and mutually fulfilling</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="footer">
+        © 2026 Lilet Silvermoon • Houston, Texas • All rights reserved
+      </footer>
+    </div>
+  </body>
+</html>
